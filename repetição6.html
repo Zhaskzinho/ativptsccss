@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <a href="index.html">Home<br></a>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 8px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <h1>Quadrados e Cubos</h1>
+  <table>
+    <tr>
+      <th>Número</th>
+      <th>Quadrado</th>
+      <th>Cubo</th>
+    </tr>
+  </table>
+
+  <script>
+    function calcularQuadradosECubos() {
+      var tabela = document.querySelector("table");
+
+      for (var i = 0; i <= 10; i++) {
+        var quadrado = i * i;
+        var cubo = i * i * i;
+
+        var row = tabela.insertRow();
+        var numeroCell = row.insertCell(0);
+        var quadradoCell = row.insertCell(1);
+        var cuboCell = row.insertCell(2);
+
+        numeroCell.textContent = i;
+        quadradoCell.textContent = quadrado;
+        cuboCell.textContent = cubo;
+      }
+    }
+
+    calcularQuadradosECubos();
+  </script>
+</body>
+</html>

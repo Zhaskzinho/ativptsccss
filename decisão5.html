@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <a href="index.html">Home<br></a>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Verificação de Acesso à Festa</h1>
+  <label for="idade">Idade:</label>
+  <input type="number" id="idade" step="1"><br>
+  <label for="amigoDonoFesta">É amigo do dono da festa?</label>
+  <select id="amigoDonoFesta">
+    <option value="sim">Sim</option>
+    <option value="nao">Não</option>
+  </select><br>
+  <button onclick="verificarAcesso()">Verificar Acesso</button>
+  <p id="resultado"></p>
+
+  <script>
+    function verificarAcesso() {
+      var idade = parseInt(document.getElementById("idade").value);
+      var amigoDonoFesta = document.getElementById("amigoDonoFesta").value;
+
+      var resultadoElement = document.getElementById("resultado");
+
+      if (idade >= 18 || amigoDonoFesta === "sim") {
+        resultadoElement.innerHTML = "Pode entrar na festa";
+      } else {
+        resultadoElement.innerHTML = "Não pode entrar na festa";
+      }
+    }
+  </script>
+</body>
+</html>

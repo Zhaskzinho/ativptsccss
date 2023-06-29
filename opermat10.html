@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <a href="index.html">Home<br></a>
+  <title>Document</title>
+  <script>
+   
+    var anoNascimento = parseInt(prompt("Digite o ano de nascimento:"));
+
+  
+    var estadoCivil = prompt("Digite o estado civil (solteiro ou casado):");
+
+  
+    var anoAtual = new Date().getFullYear();
+    var idade = anoAtual - anoNascimento;
+
+    
+    if (estadoCivil === "solteiro" && idade > 18) {
+      alert("É solteiro e maior de 18 anos.");
+    } else {
+      alert("Não atende aos critérios de solteiro e maior de 18 anos.");
+    }
+  </script>
+</head>
+<body>
+ 
+</body>
+</html>

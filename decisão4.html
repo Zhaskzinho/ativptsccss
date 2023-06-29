@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <a href="index.html">Home<br></a>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Verificação de Eleitor</h1>
+  <label for="idade">Idade:</label>
+  <input type="number" id="idade" step="1"><br>
+  <label for="tituloEleitor">Possui título de eleitor?</label>
+  <select id="tituloEleitor">
+    <option value="sim">Sim</option>
+    <option value="nao">Não</option>
+  </select><br>
+  <button onclick="verificarEleitor()">Verificar Eleitor</button>
+  <p id="resultado"></p>
+
+  <script>
+    function verificarEleitor() {
+      var idade = parseInt(document.getElementById("idade").value);
+      var tituloEleitor = document.getElementById("tituloEleitor").value;
+
+      var resultadoElement = document.getElementById("resultado");
+
+      if (idade >= 16 && tituloEleitor === "sim") {
+        resultadoElement.innerHTML = "Pode votar";
+      } else {
+        resultadoElement.innerHTML = "Não pode votar";
+      }
+    }
+  </script>
+</body>
+</html>

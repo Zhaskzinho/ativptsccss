@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Document</title>
+</head><a href="index.html">Home<br></a>
+<body>
+
+<script>
+  var valorMetros = prompt("Digite um valor em metros:");
+  var valorMilimetros = prompt("Digite um valor em milímetros:");
+
+  var valorCentimetros = valorMetros * 100 + valorMilimetros / 10;
+  var valorDecimetros = valorMetros * 10 + valorMilimetros / 100;
+
+  document.write("Valor em metros: " + valorMetros + "<br>");
+  document.write("Valor em centímetros: " + valorCentimetros + "<br>");
+  document.write("Valor em decímetros: " + valorDecimetros + "<br>");
+</script>
+
+</body>
+</html>

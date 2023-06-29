@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <a href="index.html">Home<br></a>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Números de 20 a 10</h1>
+  <button onclick="escreverNumeros()">Escrever Números</button>
+
+  <script>
+    function escreverNumeros() {
+      var resultadoElement = document.createElement("p");
+
+      for (var i = 20; i >= 10; i--) {
+        var numero = document.createTextNode(i);
+        resultadoElement.appendChild(numero);
+        resultadoElement.appendChild(document.createElement("br"));
+      }
+
+      document.body.appendChild(resultadoElement);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <a href="index.html">Home<br></a>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Determinação de Maior e Menor Idade</h1>
+  <label for="idade1">Idade 1:</label>
+  <input type="number" id="idade1" step="1"><br>
+  <label for="idade2">Idade 2:</label>
+  <input type="number" id="idade2" step="1"><br>
+  <label for="idade3">Idade 3:</label>
+  <input type="number" id="idade3" step="1"><br>
+  <label for="idade4">Idade 4:</label>
+  <input type="number" id="idade4" step="1"><br>
+  <label for="idade5">Idade 5:</label>
+  <input type="number" id="idade5" step="1"><br>
+  <button onclick="determinarMaiorMenorIdade()">Determinar</button>
+  <p id="resultado"></p>
+
+  <script>
+    function determinarMaiorMenorIdade() {
+      var idade1 = parseInt(document.getElementById("idade1").value);
+      var idade2 = parseInt(document.getElementById("idade2").value);
+      var idade3 = parseInt(document.getElementById("idade3").value);
+      var idade4 = parseInt(document.getElementById("idade4").value);
+      var idade5 = parseInt(document.getElementById("idade5").value);
+
+      var resultadoElement = document.getElementById("resultado");
+
+      var maiorIdade = Math.max(idade1, idade2, idade3, idade4, idade5);
+      var menorIdade = Math.min(idade1, idade2, idade3, idade4, idade5);
+
+      resultadoElement.innerHTML = "Maior idade: " + maiorIdade + "<br>Menor idade: " + menorIdade;
+    }
+  </script>
+</body>
+</html>
